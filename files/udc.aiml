@@ -1,18 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
+    
   <category>
     <pattern>*</pattern>
-    <template>I have no answer for that.</template>
+    <template>Do you want to:
+        <button>
+            <text>Test my Skin Type</text>
+            <postback>SkinType</postback>
+        </button>
+        <button>
+            <text>Tmprove my Skincare Routine</text>
+            <postback>Routine</postback>
+        </button>
+        <button>
+            <text>Ask a specific question</text>
+            <postback>Question</postback>
+        </button></template>
   </category>
+  
   <category>
       <pattern>Hi</pattern>
       <template>
           <random>
-              <li>Hi, there.</li>
-              <li>Hello!</li>
-              <li>It’s good to see you.</li>
-              <li>It’s nice to meet you.</li>
+              <li>Hi, there. </li>
+              <li>Hello! </li>
+              <li>It’s good to see you. </li>
+              <li>It’s nice to meet you. </li>
           </random>
+        My name is SkinCare Chatbot and I'm here to help you improve your skincare.
+        Bear in mind that I don't offer medical advice and if you have severe issues you should visit a professional.
+        <split/>
+        Do you want to:
+        <button>
+            <text>Test my Skin Type</text>
+            <postback>SkinType</postback>
+        </button>
+        <button>
+            <text>Improve my Skincare Routine</text>
+            <postback>Routine</postback>
+        </button>
+        <button>
+            <text>Ask a specific question</text>
+            <postback>Question</postback>
+        </button>
       </template>
   </category>
+  
+  <category>
+      <pattern>Hello</pattern>
+      <template><srai>Hi</srai></template>
+  </category>
+  
+  <category>
+      <pattern>SkinType</pattern>
+      <template>Test</template>
+  </category>
+  
+  <category>
+      <pattern>Routine</pattern>
+      <template>test</template>
+  </category>
+  
+  <category>
+      <pattern>Question</pattern>
+      <template>What can I help you with?</template>
+  </category>
+  
+  <category>
+      <pattern> ^ Acne ^</pattern>
+      <template>Acne develops when sebum — an oily substance that lubricates your hair and skin — and dead skin cells plug hair follicles.
+      Bacteria can trigger inflammation and infection resulting in more severe acne - if you experience that, please visit a doctor.
+      <button>
+          <text>More information about Acne you can find here</text>
+          <url>https://www.mayoclinic.org/diseases-conditions/acne/symptoms-causes/syc-20368047</url>
+      </button>
+      <split/>
+      If your acne is less severe, I can provide some advice. Are you interested?
+      <think><set name="topic">ACNE</set></think>
+      </template>
+  </category>
+  
+  <topic name="ACNE">
+      <category>
+          <pattern>yes</pattern>
+          <template>Avoid touching your face. This may couse flare-ups. Do you want another advice?</template>
+      </category>
+      
+      <category>
+          <pattern>no</pattern>
+          <template><srai>*</srai></template>
+      </category>
+      
+      <category>
+          <pattern>yes</pattern>
+          <that>Avoid touching your face. This may couse flare-ups. Do you want another advice?</that>
+          <template>
+          Wash your face twice a day as usual but don't forget good moisturizing after that because water dries your skin.
+          Dry skin produces more sebum and it couses more acne to develop.
+          </template>
+      </category>
+      
+      
+  </topic>
+ 
+  
 </aiml>
