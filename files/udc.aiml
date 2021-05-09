@@ -9,13 +9,14 @@
             <postback>SkinType</postback>
         </button>
         <button>
-            <text>Tmprove my Skincare Routine</text>
+            <text>Improve my Skincare Routine</text>
             <postback>Routine</postback>
         </button>
         <button>
             <text>Ask a specific question</text>
             <postback>Question</postback>
-        </button></template>
+        </button>
+    </template>
   </category>
   
   <category>
@@ -51,20 +52,249 @@
       <template><srai>Hi</srai></template>
   </category>
   
+  
   <category>
       <pattern>SkinType</pattern>
-      <template>Test</template>
+      <template>Which most closely describes the look of your pores?
+      
+      <button>
+          <text>A. Large and visible all over. </text>
+          <postback>Q1</postback>
+      </button>
+      <button>
+          <text>B. Medium-sized all over. </text>
+          <postback>Q1</postback>
+      </button>
+      <button>
+          <text>C. Larger or medium and only visible in the T-zone.</text>
+          <postback>Q1</postback>
+      </button>
+      <button>
+          <text>D. Small, not easily noticed all over.</text>
+          <postback>Q1</postback>
+      </button>
+      </template>
+  </category> 
+  
+  <category>
+      <pattern>Q1</pattern>
+      <template>When does your skin look red?
+      <button>
+          <text>A. Anytime I have blemishes</text>
+          <postback>Q2</postback>
+      </button>
+      <button>
+          <text>B. Whenever and wherever I use new products.</text>
+          <postback>Q2</postback>
+      </button>
+      <button>
+          <text>C. Sometimes, but only around my cheeks.</text>
+          <postback>Q2</postback>
+      </button>
+      <button>
+          <text>D. More often than I care to admit. </text>
+          <postback>Q2</postback>
+      </button>
+      </template>
   </category>
+  
+ <category>
+     <pattern>Q2</pattern>
+     <template>I would describe the shine of my skin like this:
+     <button>
+         <text>A. Bright like a diamond.</text>
+         <postback>Q3</postback>
+     </button>
+     <button>
+         <text>B. I get more stinging than shine.</text>
+         <postback>Q3</postback>
+     </button>
+     <button>
+         <text>C. Shiny in my T-zone, but dull on my cheeks.</text>
+         <postback>Q3</postback>
+     </button>
+     <button>
+         <text>D. Dull everywhere.</text>
+         <postback>Q3</postback>
+     </button>
+     </template>
+ </category>
+ 
+ <category>
+     <pattern>Q3</pattern>
+     <template>How does it feel when you touch your skin?
+     <button>
+         <text>A.Slick and greasy.</text>
+         <postback>Q4</postback>
+     </button>
+     <button>
+         <text>B. Irritated and angry.</text>
+         <postback>Q4</postback>
+     </button>
+     <button>
+         <text>C.Oily in places and dry in others.</text>
+         <postback>Q4</postback>
+     </button>
+     <button>
+         <text>D.Rough and scaly.</text>
+         <postback>Q4</postback>
+     </button>
+     </template>
+ </category>
+ 
+ <category>
+     <pattern>Q4</pattern>
+     <template>In the afternoon, my skin needs:
+     <button>
+         <text>A.Blotting or powder all over?</text>
+         <postback>Q5</postback>
+     </button>
+     <button>
+         <text>B.A refreshing spritz of facial spray.</text>
+         <postback>Q5</postback>
+     </button>
+     <button>
+         <text>C.Blotting or powdering on the forehead, nose, and/or chin.</text>
+         <postback>Q5</postback>
+     </button>
+     <button>
+         <text>D.Moisturizing, moisturizing, moisturizing.</text>
+         <postback>Q5</postback>
+     </button>
+     </template>
+ </category>
+ 
+ <category>
+     <pattern>Q5</pattern>
+     <template>How does your skin feel after you wash your face?
+     <button>
+         <text>A. Clean, for now, but the oil is coming soon.</text>
+         <postback>Q6</postback>
+     </button>
+     <button>
+         <text>B.Itchy and a little bit dry.</text>
+         <postback>Q6</postback>
+     </button>
+     <button>
+         <text>C. Clean and great in my T-zone, but my cheeks are a little bit dried out.</text>
+         <postback>Q6</postback>
+     </button>
+     <button>
+         <text>D.Stripped of moisture.</text>
+         <postback>Q6</postback>
+     </button>
+     </template>
+ </category>
+ 
+ <category>
+     <pattern>Q6</pattern>
+     <template>Pick the one that best describes your skin's relationship with pimples and blackheads.
+     <button>
+         <text>A. I hate them, but they love me. </text>
+         <postback>RESULTS</postback>
+     </button>
+     <button>
+         <text>B.My blemishes are more likely to be broken capillaries or rashes.</text>
+         <postback>RESULTS</postback>
+     </button>
+     <button>
+         <text>C.They have their territory around my T-zone, and I have claimed the cheeks for my own.</text>
+         <postback>RESULTS</postback>
+     </button>
+     <button>
+         <text>D.I'd trade my skin's flakiness and tightness for a few blackheads. </text>
+         <postback>RESULTS</postback>
+     </button>
+     </template>
+ </category>
+ 
+ <category>
+     <pattern>RESULTS</pattern>
+     <template>If  most of your answers were A, your skin type is Oily.<break/>
+     If B, your skin type is Sensitive. <break/>
+     C means you have Combination skin type. <break/>
+     D stands for Dry skin type. <break/>
+     If your answers didn't reveal your skin type, try visitting a dermatologist.</template>
+ </category>
+  
   
   <category>
       <pattern>Routine</pattern>
-      <template>test</template>
+      <template>i need your skin type if you dont know make your test
+      <button>
+          <text>Oily</text>
+          <postback>Oily</postback>
+      </button>
+      <button>
+          <text>Sensitive</text>
+          <postback>Sensitive</postback>
+      </button>
+      <button>
+          <text>Combination</text>
+          <postback>Combination</postback>
+      </button>
+      <button>
+          <text>Dry</text>
+          <postback>Dry</postback>
+      </button>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>Oily</pattern>
+      <template>
+          First of all you need to remember about Corect Order of Skin Care, because it really matters.
+          <delay>5</delay>
+    <image>https://www.dermstore.com/blog/wp-content/uploads/2018/08/order-of-skin-care-products-1.jpg</image>
+    <delay>10</delay>
+     The skincare routine for oily skin contains ingredients that help control excess oil production. 
+     <delay>5</delay>
+    <image>https://www.byrdie.com/thmb/zSpNehFxmk2lKi9-sGnlIIB88TM=/800x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/oily-skin-add34874da4e4c7795d55a8313a0ca64.png</image> 
+    </template>
+  </category>
+ 
+  <category>
+      <pattern>Sensitive</pattern>
+      <template>First of all you need to remember about Corect Order of Skin Care, because it really matters.
+      <delay>5</delay>
+    <image>https://www.dermstore.com/blog/wp-content/uploads/2018/08/order-of-skin-care-products-1.jpg</image>
+     <delay>10</delay>
+     The skincare routine for sensitive skin needs to be nonirritating.A lot of people think of sensitive skin as acne-prone, but I think of it as skin that gets red and irritated easily,
+     <delay>5</delay>
+     <image>https://www.byrdie.com/thmb/W5-x3R7Gw8wIVPn6toD8kqgJW-Y=/800x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/sensitive-skin-2f4d5a41203a4215a3a94bf700029d33.png</image>
+   </template>
+  </category>
+  
+  <category>
+      <pattern>Combination</pattern>
+      <template>First of all you need to remember about Corect Order of Skin Care, because it really matters.
+       <delay>5</delay>
+    <image>https://www.dermstore.com/blog/wp-content/uploads/2018/08/order-of-skin-care-products-1.jpg</image>
+    <delay>10</delay>
+    The skincare routine for combination skin contains ingredients that treat a wide range of skin concerns. 
+    <delay>5</delay>
+    <image>https://www.byrdie.com/thmb/9-30jt2GIR6A0xdBcTMqR9Yywjg=/800x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/combination-skin-e3efac61c03c45a58bc167e27891dc17.png</image>
+    </template>
+  </category>
+  
+  <category>
+      <pattern>Dry</pattern>
+      <template>First of all you need to remember about Corect Order of Skin Care, because it really matters.
+      <delay>5</delay>
+    <image>https://www.dermstore.com/blog/wp-content/uploads/2018/08/order-of-skin-care-products-1.jpg</image>
+    <delay>10</delay>
+    The best skincare routine for dry skin typically contains products that keep skin hydrated.
+    In serum look for vitamins E, A, and C.
+    <delay>5</delay>
+    <image>https://www.byrdie.com/thmb/FWI4jSeY5dzYv2fg2iXbZTD2WuU=/800x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/dry-skin-9b5f43c5569f4fe1a890b80cf497a9a8.png</image>
+    </template>
   </category>
   
   <category>
       <pattern>Question</pattern>
       <template>What can I help you with?</template>
   </category>
+  
   
   <category>
       <pattern> ^ Acne ^</pattern>
@@ -82,24 +312,72 @@
   
   <topic name="ACNE">
       <category>
-          <pattern>yes</pattern>
-          <template>Avoid touching your face. This may couse flare-ups. Do you want another advice?</template>
+          <pattern>^ yes ^</pattern>
+          <template> I have prepared 10 tips for you. Choose a number from 1-10 if you want only a single tip or type 'all' if you want to read all of them.</template>
       </category>
-      
       <category>
-          <pattern>no</pattern>
-          <template><srai>*</srai></template>
-      </category>
-      
-      <category>
-          <pattern>yes</pattern>
-          <that>Avoid touching your face. This may couse flare-ups. Do you want another advice?</that>
+          <pattern>*</pattern>
           <template>
-          Wash your face twice a day as usual but don't forget good moisturizing after that because water dries your skin.
-          Dry skin produces more sebum and it couses more acne to develop.
-          </template>
+              <think><set name="response"><star/></set></think>
+              <condition name="response">
+                  <li value="1">Avoid touching your face. This may couse flare-ups.</li>
+                  <li value="2">Wash your face twice a day as usual but don't forget good moisturizing after that because water dries your skin. Dry skin produces more sebum and it couses more acne to develop.</li>
+                  <li value="3">Be delicate with your skin. Use gentle, alcohol-free products. Don't use anything that may irritate your skin - if it stings, stop using it.</li>
+                  <li value="4">Avoid exposing your skin to the sun for too long. Tanning damages you skin. What's more, some acne medications make the skin very sensitive to ultraviolet (UV) light, which you get from both the sun and indoor tanning devices.
+You should always use sunscreen when staying under the sun, the higher the SPF (Sun Protection Factor) the better, but watch out for misleading advertising.</li>
+                  <li value="5">Allow your skin to heal itself. If you pop your acne, your skin will take longer to clear and you increase the risk of getting acne scars. If you really need to, do it the right, least harmful way:
+                  <button>
+                      <text>How to pop a pimple</text>
+                      <url>https://www.teenvogue.com/story/how-to-safely-pop-pimples</url>
+                  </button>
+                  </li>
+                  <li value="6">Shampoo regularly. Oily hair can cause acne if it touches your face all the time. Hair products may not work properly  if they're not thoroughly washed off. Make sure to wash your hair properly and rinse away all the product that just may be clogging the pores near your hairline.</li>
+                  <li value="7">Wash your pillowcases, hats and anything touching your skin for longer periods of time. They accumulate dead skin cells, bacteria and dirt, which can clog your pores.</li>
+                  <li value="8">If your skin feels greasy, don't scrub it until it's clean. It can irritate your skin and make acne worse. Instead, use an enzymatic peeling which works well with your skin.</li>
+                  <li value="9">Use a separate towel for your face and change it regularly. You can also use paper towels, which work even better, but are less environmentally-friendly.</li>
+                  <li value="10">Too much stress and not enough sleep can both cause acne. Dermatologists advise to reduce stress and improve sleep hygiene, to let your body and skin to function properly. Stay healthy and allow yourself for some relaxation.</li>
+                  <li value="all">
+                        Avoid touching your face. This may couse flare-ups.
+                          <delay>2</delay>
+                        Wash your face twice a day as usual but don't forget good moisturizing after that because water dries your skin. Dry skin produces more sebum and it couses more acne to develop.
+                          <delay>7</delay>
+                          Be delicate with your skin. Use gentle, alcohol-free products. Don't use anything that may irritate your skin - if it stings, stop using it.
+                          <delay>6</delay>
+                          Avoid exposing your skin to the sun for too long. Tanning damages your skin. What's more, some acne medications make the skin very sensitive to ultraviolet (UV) light, which you get from both the sun and indoor tanning devices.
+                          You should always use sunscreen when staying under the sun, the higher the SPF (Sun Protection Factor) the better, but watch out for misleading advertising.
+                          <delay>17</delay>
+                          Allow your skin to heal itself. If you pop your acne, your skin will take longer to clear and you increase the risk of getting acne scars. If you really need to, do it the right, least harmful way:
+                             <button>
+                               <text>How to pop a pimple</text>
+                               <url>https://www.teenvogue.com/story/how-to-safely-pop-pimples</url>
+                             </button> 
+                          <delay>10</delay>
+                          Shampoo regularly. Oily hair can cause acne if it touches your face all the time. Hair products may not work properly  if they're not thoroughly washed off. Make sure to wash your hair properly and rinse away all the product that just may be clogging the pores near your hairline.
+                          <delay>9</delay>
+                          Wash your pillowcases, hats and anything touching your skin for longer periods of time. They accumulate dead skin cells, bacteria and dirt, which can clog your pores.
+                          <delay>7</delay>
+                          If your skin feels greasy, don't scrub it until it's clean. It can irritate your skin and make acne worse. Instead, use an enzymatic peeling which works well with your skin.
+                          <delay>7</delay>
+                          Use a separate towel for your face and change it regularly. You can also use paper towels, which work even better, but are less environmentally-friendly.
+                          <delay>7</delay>
+                          Too much stress and not enough sleep can both cause acne. Dermatologists advise to reduce stress and improve sleep hygiene, to let your body and skin to function properly. Stay healthy and allow yourself for some relaxation.
+                  </li>
+                  <li>Do you want to:
+                        <button>
+                            <text>Test my Skin Type</text>
+                            <postback>SkinType</postback>
+                        </button>
+                        <button>
+                            <text>Tmprove my Skincare Routine</text>
+                            <postback>Routine</postback>
+                        </button>
+                        <button>
+                            <text>Ask a specific question</text>
+                            <postback>Question</postback>
+                        </button></li>
+              </condition>
+              </template>
       </category>
-      
       
   </topic>
  
