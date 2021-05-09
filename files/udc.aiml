@@ -52,6 +52,16 @@
       <template><srai>Hi</srai></template>
   </category>
   
+  <category>
+      <pattern>Hey</pattern>
+      <template><srai>Hi</srai></template>
+  </category>
+  
+  <category>
+      <pattern>How are you?</pattern>
+      <template><srai>Hi</srai></template>
+  </category>
+  
   
   <category>
       <pattern>SkinType</pattern>
@@ -310,6 +320,14 @@
   </category>
   
   <topic name="ACNE">
+       <category>
+          <pattern>^ yeah ^</pattern>
+          <template><srai>^ yes ^</srai></template>
+      </category>
+      <category>
+          <pattern>I am interested</pattern>
+          <template><srai>^ yes ^</srai></template>
+      </category>
       <category>
           <pattern>^ yes ^</pattern>
           <template> I have prepared 10 tips for you. Choose a number from 1-10 if you want only a single tip or type 'all' if you want to read all of them.</template>
@@ -367,7 +385,7 @@ You should always use sunscreen when staying under the sun, the higher the SPF (
                             <postback>SkinType</postback>
                         </button>
                         <button>
-                            <text>Tmprove my Skincare Routine</text>
+                            <text>Improve my Skincare Routine</text>
                             <postback>Routine</postback>
                         </button>
                         <button>
@@ -377,26 +395,34 @@ You should always use sunscreen when staying under the sun, the higher the SPF (
               </condition>
               </template>
       </category>
-      
+     
   </topic>
   
   <category>
       <pattern>^ wrinkles ^</pattern>
-      <template>Wrinkles, also known as rhytides, are folds in your skin. As you age, your skin produces less of the proteins collagen and elastin. This makes your skin thinner and less resistant to damage.
+      <template>Wrinkles, also known as rhytides, are folds in your skin. As you age, your skin produces less of the proteins collagen and elastin. This makes your skin thinner and less resistant to damage. You cannot stop this process, however, you can slow it down significantly.
      <button>
          <text>More information about Wrinkles you can find here</text>
          <url>https://www.mayoclinic.org/diseases-conditions/wrinkles/symptoms-causes/syc-20354927</url>
      </button>
      <split/>
-     Want more?
-      <set name="topic">WRINKLES</set>
+     I can provide some advice on how to achieve that. Are you interested? 
+      <think><set name="topic">WRINKLES</set></think>
       </template>
   </category>
   
   <topic name="WRINKLES">
       <category>
+          <pattern>^ yeah ^</pattern>
+          <template><srai>^ yes ^</srai></template>
+      </category>
+      <category>
+          <pattern>I am interested</pattern>
+          <template><srai>^ yes ^</srai></template>
+      </category>
+      <category>
           <pattern>^ yes ^</pattern>
-          <template>bla bla 10 tips </template>
+          <template>I have prepared 10 tips for you. Choose a number from 1-10 if you want only a single tip or type 'all' if you want to read all of them.</template>
       </category>
       <category>
           <pattern>*</pattern>
@@ -439,7 +465,7 @@ You should always use sunscreen when staying under the sun, the higher the SPF (
                             <postback>SkinType</postback>
                         </button>
                         <button>
-                            <text>Tmprove my Skincare Routine</text>
+                            <text>Improve my Skincare Routine</text>
                             <postback>Routine</postback>
                         </button>
                         <button>
