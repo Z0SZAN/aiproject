@@ -243,11 +243,11 @@
   <category>
       <pattern>Oily</pattern>
       <template>
-          First of all you need to remember about Corect Order of Skin Care, because it really matters.
+          First of all, you need to know the corect order of skin care - it really matters.
           <delay>5</delay>
     <image>https://www.dermstore.com/blog/wp-content/uploads/2018/08/order-of-skin-care-products-1.jpg</image>
     <delay>10</delay>
-     The skincare routine for oily skin contains ingredients that help control excess oil production. 
+     The skincare routine for oily skin includes ingredients that help control excess oil production. 
      <delay>5</delay>
     <image>https://www.byrdie.com/thmb/zSpNehFxmk2lKi9-sGnlIIB88TM=/800x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/oily-skin-add34874da4e4c7795d55a8313a0ca64.png</image> 
     </template>
@@ -255,11 +255,11 @@
  
   <category>
       <pattern>Sensitive</pattern>
-      <template>First of all you need to remember about Corect Order of Skin Care, because it really matters.
+      <template>First of all, you need to know the corect order of skin care - it really matters.
       <delay>5</delay>
     <image>https://www.dermstore.com/blog/wp-content/uploads/2018/08/order-of-skin-care-products-1.jpg</image>
      <delay>10</delay>
-     The skincare routine for sensitive skin needs to be nonirritating.A lot of people think of sensitive skin as acne-prone, but I think of it as skin that gets red and irritated easily,
+     The skincare routine for sensitive skin needs to be non-irritating. People often think of sensitive skin as acne-prone, but it is more accurate to consider it as skin that gets red and irritated easily.
      <delay>5</delay>
      <image>https://www.byrdie.com/thmb/W5-x3R7Gw8wIVPn6toD8kqgJW-Y=/800x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/sensitive-skin-2f4d5a41203a4215a3a94bf700029d33.png</image>
    </template>
@@ -267,11 +267,11 @@
   
   <category>
       <pattern>Combination</pattern>
-      <template>First of all you need to remember about Corect Order of Skin Care, because it really matters.
+      <template>First of all, you need to know the corect order of skin care - it really matters.
        <delay>5</delay>
     <image>https://www.dermstore.com/blog/wp-content/uploads/2018/08/order-of-skin-care-products-1.jpg</image>
     <delay>10</delay>
-    The skincare routine for combination skin contains ingredients that treat a wide range of skin concerns. 
+    The skincare routine for combination skin includes ingredients that treat a wide range of skin concerns. 
     <delay>5</delay>
     <image>https://www.byrdie.com/thmb/9-30jt2GIR6A0xdBcTMqR9Yywjg=/800x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/combination-skin-e3efac61c03c45a58bc167e27891dc17.png</image>
     </template>
@@ -279,12 +279,11 @@
   
   <category>
       <pattern>Dry</pattern>
-      <template>First of all you need to remember about Corect Order of Skin Care, because it really matters.
+      <template>First of all, you need to know the corect order of skin care - it really matters.
       <delay>5</delay>
     <image>https://www.dermstore.com/blog/wp-content/uploads/2018/08/order-of-skin-care-products-1.jpg</image>
     <delay>10</delay>
-    The best skincare routine for dry skin typically contains products that keep skin hydrated.
-    In serum look for vitamins E, A, and C.
+    The best skincare routine for dry skin typically includes products that keep the skin hydrated. Look for serums containing vitamins E, A, and C.
     <delay>5</delay>
     <image>https://www.byrdie.com/thmb/FWI4jSeY5dzYv2fg2iXbZTD2WuU=/800x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/dry-skin-9b5f43c5569f4fe1a890b80cf497a9a8.png</image>
     </template>
@@ -320,8 +319,8 @@
           <template>
               <think><set name="response"><star/></set></think>
               <condition name="response">
-                  <li value="1">Avoid touching your face. This may couse flare-ups.</li>
-                  <li value="2">Wash your face twice a day as usual but don't forget good moisturizing after that because water dries your skin. Dry skin produces more sebum and it couses more acne to develop.</li>
+                  <li value="1">Avoid touching your face. This may cause flare-ups.</li>
+                  <li value="2">Wash your face twice a day as usual but don't forget good moisturizing after that because water dries your skin. Dry skin produces more sebum and it causes more acne to develop.</li>
                   <li value="3">Be delicate with your skin. Use gentle, alcohol-free products. Don't use anything that may irritate your skin - if it stings, stop using it.</li>
                   <li value="4">Avoid exposing your skin to the sun for too long. Tanning damages you skin. What's more, some acne medications make the skin very sensitive to ultraviolet (UV) light, which you get from both the sun and indoor tanning devices.
 You should always use sunscreen when staying under the sun, the higher the SPF (Sun Protection Factor) the better, but watch out for misleading advertising.</li>
@@ -380,6 +379,77 @@ You should always use sunscreen when staying under the sun, the higher the SPF (
       </category>
       
   </topic>
- 
   
+  <category>
+      <pattern>^ wrinkles ^</pattern>
+      <template>Wrinkles, also known as rhytides, are folds in your skin. As you age, your skin produces less of the proteins collagen and elastin. This makes your skin thinner and less resistant to damage.
+     <button>
+         <text>More information about Wrinkles you can find here</text>
+         <url>https://www.mayoclinic.org/diseases-conditions/wrinkles/symptoms-causes/syc-20354927</url>
+     </button>
+     <split/>
+     Want more?
+      <set name="topic">WRINKLES</set>
+      </template>
+  </category>
+  
+  <topic name="WRINKLES">
+      <category>
+          <pattern>^ yes ^</pattern>
+          <template>bla bla 10 tips </template>
+      </category>
+      <category>
+          <pattern>*</pattern>
+          <template><think><set name="response"><star/></set></think>
+          <condition name="response">
+              <li value="1">Wearing sunscreen with a sun protection factor (SPF) over 30 can not only help prevent skin cancer, but also helps delay the signs of aging. Wearing a moisturizing sunscreen on your face each day is a beneficial for your skin health long-term. </li>
+              <li value="2">Sugar consumption can make you look older. Aging has also been linked to preparing food by grilling and frying, instead of baking or boiling. Limiting sugar and oil-rich foods in your diet will help you look younger for longer.</li>
+              <li value="3">Smoking can age your face prematurely. Being around people smoking also can increase your risk for cancers and other diseases, and it may hurt your skin as well.</li>
+              <li value="4">Coconut oil makes your skin feel smooth when applied directly. It also helps skin retain moisture, making your face appear fuller. Coconut oil has also been found to be an effective treatment for dry skin.</li>
+              <li value="5">Beta carotenes block the sun’s ultraviolet light from damaging your skin and eyes. It is often an ingredient of anti-aging cosmetics, but it can also be taken as a supplement. As little as 30 milligrams per day of beta carotene, taken orally, can prevent and repair photoaging (otherwise known as wrinkles).</li>
+              <li value="6">Lemon balm leaf extract makes skin more elastic and corrects tissue damage. It can be consumed in the form of lemon balm leaf tea.</li>
+              <li value="7">Wrinkling on your face can be caused by the position that you sleep in. If your face is pressing against the pillow in the same way every night, over time, this compression leaves your skin weaker in some places than others, and a wrinkle forms. You can prevent or slow down compression wrinkles by sleeping on your back.</li>
+              <li value="8">Wash your face before sleep, especially if you wear make-up. Avoid vigorously scrubbing your face. Use a water-based wipe to cleanse your face, and splash it with cold water when you're finished.</li>
+              <li value="9">Ultraviolet light is the cause of most wrinkles on your face, neck, arms, and hands. Wear a hat that shields your face from the sun during long periods outdoors, and when possible, wear longer trousers and long-sleeved shirts. You’ll still absorb some sunshine, but you won’t be contributing to the wrinkles on your skin.</li>
+              <li value="10">Antioxidants help fight the damage that oxidative stress does to your cells. Eating a diet rich in blueberries, kidney beans, grapes, kale, and spinach, along with using antioxidant-rich cosmetics, could reduce the signs of premature aging.</li>
+              <li value="all">
+                  Wearing sunscreen with a sun protection factor (SPF) over 30 can not only help prevent skin cancer, but also helps delay the signs of aging. Wearing a moisturizing sunscreen on your face each day is a beneficial for your skin health long-term.
+                  <delay>10</delay>
+                  Sugar consumption can make you look older. Aging has also been linked to preparing food by grilling and frying, instead of baking or boiling. Limiting sugar and oil-rich foods in your diet will help you look younger for longer.
+                  <delay>10</delay>
+                  Smoking can age your face prematurely. Being around people smoking also can increase your risk for cancers and other diseases, and it may hurt your skin as well.
+                  <delay>7</delay>
+                  Coconut oil makes your skin feel smooth when applied directly. It also helps skin retain moisture, making your face appear fuller. Coconut oil has also been found to be an effective treatment for dry skin.
+                  <delay>10</delay>
+                  Beta carotenes block the sun’s ultraviolet light from damaging your skin and eyes. It is often an ingredient of anti-aging cosmetics, but it can also be taken as a supplement. As little as 30 milligrams per day of beta carotene, taken orally, can prevent and repair photoaging (otherwise known as wrinkles).
+                  <delay>15</delay>
+                  Lemon balm leaf extract makes skin more elastic and corrects tissue damage. It can be consumed in the form of lemon balm leaf tea.
+                  <delay>6</delay>
+                  Wrinkling on your face can be caused by the position that you sleep in. If your face is pressing against the pillow in the same way every night, over time, this compression leaves your skin weaker in some places than others, and a wrinkle forms. You can prevent or slow down compression wrinkles by sleeping on your back.
+                  <delay>15</delay>
+                  Wash your face before sleep, especially if you wear make-up. Avoid vigorously scrubbing your face. Use a water-based wipe to cleanse your face, and splash it with cold water when you're finished.
+                  <delay>10</delay>
+                  Ultraviolet light is the cause of most wrinkles on your face, neck, arms, and hands. Wear a hat that shields your face from the sun during long periods outdoors, and when possible, wear longer trousers and long-sleeved shirts. You’ll still absorb some sunshine, but you won’t be contributing to the wrinkles on your skin.
+                  <delay>15</delay>
+                  Antioxidants help fight the damage that oxidative stress does to your cells. Eating a diet rich in blueberries, kidney beans, grapes, kale, and spinach, along with using antioxidant-rich cosmetics, could reduce the signs of premature aging.
+              </li>
+              <li>Do you want to:
+                        <button>
+                            <text>Test my Skin Type</text>
+                            <postback>SkinType</postback>
+                        </button>
+                        <button>
+                            <text>Tmprove my Skincare Routine</text>
+                            <postback>Routine</postback>
+                        </button>
+                        <button>
+                            <text>Ask a specific question</text>
+                            <postback>Question</postback>
+                        </button>
+               </li>
+          </condition>
+          </template>
+      </category>
+  </topic>
+ 
 </aiml>
