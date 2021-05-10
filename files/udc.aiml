@@ -3,7 +3,7 @@
     
   <category>
     <pattern>*</pattern>
-    <template>Do you want to:
+    <template>Would you like to:
         <button>
             <text>Test my Skin Type</text>
             <postback>SkinType</postback>
@@ -56,12 +56,6 @@
       <pattern>Hey</pattern>
       <template><srai>Hi</srai></template>
   </category>
-  
-  <category>
-      <pattern>How are you?</pattern>
-      <template><srai>Hi</srai></template>
-  </category>
-  
   
   <category>
       <pattern>SkinType</pattern>
@@ -230,7 +224,7 @@
   
   <category>
       <pattern>Routine</pattern>
-      <template>i need your skin type if you dont know make your test
+      <template>Choose your skin type. If you don't know what it is, try my test.
       <button>
           <text>Oily</text>
           <postback>Oily</postback>
@@ -304,6 +298,12 @@
       <template>What can I help you with?</template>
   </category>
   
+  <category>
+      <pattern>*</pattern>
+      <that>WHAT CAN I HELP YOU WITH</that>
+      <template>Sorry, I don't know how to help with that.</template>
+  </category>
+  
   
   <category>
       <pattern> ^ Acne ^</pattern>
@@ -326,6 +326,10 @@
       </category>
       <category>
           <pattern>I am interested</pattern>
+          <template><srai>^ yes ^</srai></template>
+      </category>
+       <category>
+          <pattern>^ yep ^</pattern>
           <template><srai>^ yes ^</srai></template>
       </category>
       <category>
@@ -354,9 +358,9 @@ You should always use sunscreen when staying under the sun, the higher the SPF (
                   <li value="9">Use a separate towel for your face and change it regularly. You can also use paper towels, which work even better, but are less environmentally-friendly.</li>
                   <li value="10">Too much stress and not enough sleep can both cause acne. Dermatologists advise to reduce stress and improve sleep hygiene, to let your body and skin to function properly. Stay healthy and allow yourself for some relaxation.</li>
                   <li value="all">
-                        Avoid touching your face. This may couse flare-ups.
+                        Avoid touching your face. This may cause flare-ups.
                           <delay>2</delay>
-                        Wash your face twice a day as usual but don't forget good moisturizing after that because water dries your skin. Dry skin produces more sebum and it couses more acne to develop.
+                        Wash your face twice a day as usual but don't forget good moisturizing after that because water dries your skin. Dry skin produces more sebum and it causes more acne to develop.
                           <delay>7</delay>
                           Be delicate with your skin. Use gentle, alcohol-free products. Don't use anything that may irritate your skin - if it stings, stop using it.
                           <delay>6</delay>
@@ -379,7 +383,7 @@ You should always use sunscreen when staying under the sun, the higher the SPF (
                           <delay>7</delay>
                           Too much stress and not enough sleep can both cause acne. Dermatologists advise to reduce stress and improve sleep hygiene, to let your body and skin to function properly. Stay healthy and allow yourself for some relaxation.
                   </li>
-                  <li>Do you want to:
+                  <li>Would you like to:
                         <button>
                             <text>Test my Skin Type</text>
                             <postback>SkinType</postback>
@@ -395,7 +399,6 @@ You should always use sunscreen when staying under the sun, the higher the SPF (
               </condition>
               </template>
       </category>
-     
   </topic>
   
   <category>
@@ -420,6 +423,11 @@ You should always use sunscreen when staying under the sun, the higher the SPF (
           <pattern>I am interested</pattern>
           <template><srai>^ yes ^</srai></template>
       </category>
+       <category>
+          <pattern>^ yep ^</pattern>
+          <template><srai>^ yes ^</srai></template>
+      </category>
+      
       <category>
           <pattern>^ yes ^</pattern>
           <template>I have prepared 10 tips for you. Choose a number from 1-10 if you want only a single tip or type 'all' if you want to read all of them.</template>
@@ -459,7 +467,7 @@ You should always use sunscreen when staying under the sun, the higher the SPF (
                   <delay>15</delay>
                   Antioxidants help fight the damage that oxidative stress does to your cells. Eating a diet rich in blueberries, kidney beans, grapes, kale, and spinach, along with using antioxidant-rich cosmetics, could reduce the signs of premature aging.
               </li>
-              <li>Do you want to:
+              <li>Would you like to:
                         <button>
                             <text>Test my Skin Type</text>
                             <postback>SkinType</postback>
@@ -476,6 +484,7 @@ You should always use sunscreen when staying under the sun, the higher the SPF (
           </condition>
           </template>
       </category>
+      
   </topic>
  <!--Sources:
  1.https://www.healthline.com/health/beauty-skin-care/how-to-get-rid-of-wrinkles
